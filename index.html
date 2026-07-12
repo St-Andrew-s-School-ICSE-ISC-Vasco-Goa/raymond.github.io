@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GA4 Demo Website</title>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Welcome to My Demo Website</h1>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+<section>
+
+<h2>Google Analytics Demo</h2>
+
+<p>
+This website is created for learning Google Analytics 4.
+</p>
+
+<button onclick="trackButton()">Click Me</button>
+
+</section>
+
+<script>
+function trackButton(){
+
+gtag('event','button_click',{
+button_name:'Home Button'
+});
+
+alert("Button Clicked!");
+
+}
+</script>
+
+</body>
+</html>
